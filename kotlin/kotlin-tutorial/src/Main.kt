@@ -3,7 +3,8 @@
 package learn.you.some.kotlin
 
 fun main(){
-    println("hello world")
+    println("hello worldgg")
+    println("hello worldgg")
     val fooVal = 10 // we cannot later reassign fooVal to something else
     var fooVar = 10
     fooVar = 20 // fooVar can be reassigned
