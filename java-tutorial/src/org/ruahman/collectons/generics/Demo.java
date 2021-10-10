@@ -8,6 +8,27 @@ import java.util.*;
 
 public class Demo {
     public static void run(){
+
+        ArrayList<String> listItems = new ArrayList<String>();
+
+        listItems.add("dog");
+        listItems.add("bird");
+        listItems.add("cat");
+
+        for(String item: listItems){
+            System.out.println(item);
+        }
+
+        // ArrayList is a type of list,
+        // List is just the interface but you don't
+        // initiat it
+        List<Integer> grades = new ArrayList<Integer>();
+//        List<Integer> grades = Arrays.asList(1,2,3,4,5);
+//
+        grades.add(5);
+        grades.add(10);
+
+        System.out.println(grades.get(0));
 //        Collection values = new ArrayList();
         // can index list
         List values = new ArrayList();

@@ -5,57 +5,16 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args){
-        char A = 'a';
-        int number = 100;
-        double floatNum = 4.55;
-        System.out.println(floatNum);
-        Date data = new Date();
-        String name = "diego";
-        System.out.println(name.toUpperCase());
-        System.out.println("hello java");
-        LocalDate now = LocalDate.now();
-        System.out.println(now);
-//        Person person = new Person("Diego");
-//        System.out.println(person.name);
+        System.out.println("hello world");
 
-//        Scanner scanner = new Scanner(System.in);
-//        String nameInput = scanner.nextLine();
-//        System.out.println(nameInput);
+        Scanner scanner = new Scanner(System.in);
+        String hello = scanner.nextLine();
+        System.out.println(hello);
 
-        // const
-        final int Y = 777;
+        org.ruahman.variables.Demo.Run();
+        org.ruahman.classes.Demo.Run();
 
-        // ArrayList is a type of list,
-        // List is just the interface but you don't
-        // initiat it
-        List<Integer> grades = new ArrayList<Integer>();
-//        List<Integer> grades = Arrays.asList(1,2,3,4,5);
-//
-        grades.add(5);
-        grades.add(10);
 
-        System.out.println(grades.get(0));
-
-        User user = new User();
-        user.setFirstname("Diego");
-        System.out.println(user.getFirstname());
-        user.setLastname("Vila");
-        System.out.println(user.getLastname());
-
-        System.out.println(user);
-
-        List<User> users = new ArrayList<User>();
-        users.add(user);
-
-        ArrayList<String> listItems = new ArrayList<String>();
-
-        listItems.add("dog");
-        listItems.add("bird");
-        listItems.add("cat");
-
-        for(String item: listItems){
-            System.out.println(item);
-        }
 
         Integer[] intArray = {1,2,3,4,5};
         String[] stringArray = {"dog","cat","bird"};
@@ -118,31 +77,7 @@ class MyGenericClass <T> {
     }
 }
 
-class User {
-    private String firstname;
-    private String lastname;
 
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String value){
-        firstname = value;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String value){
-        lastname = value;
-    }
-
-    @Override
-    public String toString() {
-        return "my string override";
-    }
-}
 
 interface Talk {
     void talking();
