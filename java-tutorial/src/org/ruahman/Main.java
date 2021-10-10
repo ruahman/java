@@ -77,7 +77,21 @@ public class Main {
 
         MyGenericClass<String> mgClass3 = new MyGenericClass<String>("Hello World");
         System.out.println(mgClass3.getValue());
-    }
+
+        int ix = 3;
+        Integer intX = new Integer(ix);
+
+        int ri = intX.intValue();
+
+        // auto box int
+        Integer autoInt = 7;
+
+        // auto unbox
+        int unboxi = autoInt;
+
+        org.ruahman.threads.ThreadDemo.demo();
+        org.ruahman.collectons.generics.Demo.run();
+    }// end main(...)
 
     static public <T> void genericMethod(T[] array){
         for(T item: array){
@@ -171,3 +185,13 @@ final class Student extends Person implements Talk{
     }
 }
 
+class Emp {
+    int eid;
+    int salary;
+    static String ceo;
+
+    static {
+        // this is where you initialize static members.
+        ceo = "static ceo";
+    }
+}
