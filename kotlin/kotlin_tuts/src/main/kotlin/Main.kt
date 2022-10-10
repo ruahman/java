@@ -7,4 +7,6 @@ fun main() {
     loops.demo()
     arrays.demo()
     functions.demo()
+    classes.demo()
+    collections.demo()
 }
