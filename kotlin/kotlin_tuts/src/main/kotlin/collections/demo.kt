@@ -1,5 +1,11 @@
 package collections
 
+
+//// generics
+interface Compare<T>{
+    fun compare(item: T, item2: T): Int
+}
+
 fun demo(){
     val numbers = listOf("one", "two", "three", "four")
 
@@ -97,6 +103,7 @@ fun demo(){
         .groupBy {it % 2 == 0}
         .mapKeys {if (it.key) "even" else "odd"}
     println(z) // => {odd=[3, 9, 15], even=[6, 12, 18]}
+
 
 
 }

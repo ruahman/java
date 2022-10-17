@@ -347,6 +347,37 @@ class BaseImpl(val x: Int) : BBase {
 }
 class Derived(b: BBase) : BBase by b  // delegating the public method on the object b
 
+//// Object
+object Calculator {
+    var total = 0
+}
+
+class Companion {
+    companion object Counter {
+        var count = 0
+    }
+}
+
+class Animal {
+    private val animalColor: String = "black"
+
+    inner class Cat {
+        fun catColor() = animalColor
+    }
+}
+
+//// properties
+class Customer {
+    var name = "James"
+        get(){
+            println("Name getter is called")
+            return field
+        }
+        set(value){
+            println("$field, $value")
+            field = value
+        }
+}
 
 
 fun demo(){
@@ -489,5 +520,22 @@ fun demo(){
         return this.filter {it != c}
     }
     println("Hello, world!".remove('l')) // => Heo, word!
+
+    //// Secondary Constructor
+
+    class Animal(var name: String){
+        var color: String = "red"
+
+        constructor(name: String, color: String): this(name) {
+            this.color = "green"
+        }
+    }
+
+    //// object
+
+    // sort of like static classes
+    Calculator.total = 5
+    Companion.Counter.count = 99
+
 
 }

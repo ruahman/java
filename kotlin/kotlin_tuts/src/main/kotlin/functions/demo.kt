@@ -119,4 +119,57 @@ fun demo(){
     for (i in 0..4) {
         println("${notOdd(i)} ${notEven(i)} ${notZero(i)} ${notPositive(i)}")
     }
+
+    fun subtraction(a: Int, b: Int): Int = if(a>b) a - b else b -a
+
+    //// named arguments
+    fun describeHuman(name: String, age: Int) {
+        println("name: $age")
+        println("age: $age")
+    }
+
+    describeHuman(name="Diego", age=41);
+
+    //// Extention functions
+    class Car(val color: String, val price: Int) {
+        fun carInfo(): String {
+            return "Color = $color & Price = $price"
+        }
+    }
+
+    fun Car.carBrand(brand: String): String {
+        return "Brand = $brand & Color = ${this.color}"
+    }
+
+    //// infix function
+
+    infix fun Int.greaterThan(x: Int) : Boolean {
+        return this > x
+    }
+
+    val res = 7 greaterThan 5
+
+    //// tail recursion
+    tailrec fun factorial(input: Int, result: Int): Int {
+        if(input == 0)
+            return result
+        else
+            return factorial(input - 1, input * result)
+    }
+
+    //// lamda
+    var testLamda: (a: Int, b: Int) -> Unit = {a: Int, b: Int ->
+        var result = a / b
+        println(result)
+    }
+    testLamda(1,2)
+
+    fun testLambda2(a: Int, b: Int, callback:(Int) -> Unit){
+        callback(a + b)
+    }
+
+    testLambda2(1,2) {
+        println("$it")
+    }
+
 }
